@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <header class="headerprinc">
+        <div class="headerprinc-content">
+            <h1>Clínica Salud y Bienestar</h1>
+            <p>Cuidamos de vos con profesionalidad y calidez</p>
+            <a href="#cita" class="cita">Solicitar Cita</a>
+        </div>
+    </header>
+    <main>
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>Consultas Generales</h3>
+                    <p>Atención médica integral para toda la familia</p>
+                </div>
+                <div class="service-card">
+                    <h3>Especialidades</h3>
+                    <p>Profesionales expertos en diversas áreas médicas</p>
+                </div>
+                <div class="service-card">
+                    <h3>Laboratorio</h3>
+                    <p>Análisis clínicos con tecnología de vanguardia</p>
+                </div>
+                <div class="service-card">
+                    <h3>Imágenes Diagnósticas</h3>
+                    <p>Equipos de última generación para diagnósticos precisos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="instalaciones">
+            <h2>Nuestras Instalaciones</h2>
+            <div class="instalaciones">
+                <div class="instalacion">
+                    <img src="./UI/Recepcion.jpg" height=250 width=400 alt="Recepción">
+                    <div class="instalacion-info">
+                        <h3>Recepción</h3>
+                        <p>Bienvenida cálida y eficiente</p>
+                    </div>
+                </div>
+                <div class="instalacion">
+                    <img src="./UI/Consultorio.jpg" height=250 width=400 alt="Consultorio">
+                    <div class="instalacion-info">
+                        <h3>Consultorios</h3>
+                        <p>Espacios confortables para tu atención</p>
+                    </div>
+                </div>
+                <div class="instalacion">
+                    <img src="./UI/Sala-Espera.jpg" height=250 width=400 alt="Sala de Espera">
+                    <div class="instalacion-info">
+                        <h3>Sala de Espera</h3>
+                        <p>Ambiente relajante y acogedor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cita">
+            <h2>Solicitar Cita</h2>
+                <br>
+                    <p>Solicite su cita y seleccione el turno</p>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="obra-social">Obra Social:</label>
+                    <div class="content-select">
+                        <select id="obra-social" name="obra-social" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="Particular">Particular</option>
+                            <option value="UOM">UOM</option>
+                            <option value="UOCRA">UOCRA</option>
+                            <option value="Osecac">Osecac</option>
+                            <option value="PAMI">Pami</option>
+                            <option value="Asimra">Asimra</option>
+                            <option value="Osuomra">Osuomra</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dni">DNI:</label>
+                    <input type="number" id="dni" name="dni" required>
+                </div> 
+                <form id="appointmentForm">
+                    <label for="date">Fecha:</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label for="time">Hora:</label>
+                    <input type="time" id="time" name="time" required>
+                    <button type="submit">Reservar Cita</button>
+                </form>
+                <div id="confirmation" style="display:none;">
+                    <h2>Cita Reservada</h2>
+                    <p id="appointmentDetails"></p>
+                </div>
+            </form> 
+        </section>
+    </main>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
